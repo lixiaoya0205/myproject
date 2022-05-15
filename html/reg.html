@@ -23,53 +23,54 @@
   <script>
     let ipt = document.querySelectorAll("input");
     //   效验 正则
-    //   let isUsername = false;
-    //   ipt[0].onblur = function () {
-    //     let reg = /^[a-zA-Z]\x{5,17}$/;
-    //     if (reg.test(this.value)) {
-    //       this.nextElementSibling.innerHTML = "";
-    //       let username = this.value;
-    //       let url = "http://jx.xuzhixiang.top/ap/api/checkname.php";
-    //       axios.get(url, { params: { username } }).then((r) => {
-    //         if (r.data.code == 0) {
-    //           isUsername = false;
-    //         } else {
-    //           isUsername = true;
-    //         }
-    //         console.log(r.data);
-    //         this.nextElementSibling.innerHTML = r.data.msg;
-    //       });
-    //     } else {
-    //       // 正则不通过
-    //       isUsername = false;
-    //       this.nextElementSibling.innerHTML =
-    //         "用户名，必须是6-18位，只能是数字、字母。下划线组成-只能以字母开头";
-    //     }
-    //   };
+    let isUsername = false;
+    ipt[0].onchange = function () {
+      let reg = /^\w{5,17}$/;
+      if (reg.test(this.value)) {
+        this.nextElementSibling.innerHTML = "";
+        let username = this.value;
+        let url = "http://jx.xuzhixiang.top/ap/api/checkname.php";
+        axios.get(url, { params: { username } }).then((r) => {
+          console.log(r.data);
+          if (r.data.code == 0) {
+            isUsername = false;
+          } else {
+            isUsername = true;
+          }
+          console.log(r.data);
+          this.nextElementSibling.innerHTML = r.data.msg;
+        });
+      } else {
+        // 正则不通过
+        isUsername = false;
+        this.nextElementSibling.innerHTML =
+          "用户名，必须是6-18位，只能是数字、字母。下划线组成-只能以字母开头";
+      }
+    };
 
-    //   //   密码输入 只需要 正则
-    //   let isPW = false;
-    //   ipt[1].onblur = function () {
-    //     let reg1 = /^.{8,16}$/;
-    //     let reg2 = /\d+/;
-    //     let reg3 = /[a-z]+/;
-    //     let reg4 = /[A-Z]+/;
-    //     if (
-    //       reg1.test(this.value) &&
-    //       reg2.test(this.value) &&
-    //       reg3.test(this.value) &&
-    //       reg4.test(this.value)
-    //     ) {
-    //       isPW = true;
-    //     } else {
-    //       isPW = false;
-    //     }
-    //   };
+    //   密码输入 只需要 正则
+    let isPW = false;
+    ipt[1].onchange = function () {
+      let reg1 = /^.{8,16}$/;
+      let reg2 = /\d+/;
+      let reg3 = /[a-z]+/;
+      let reg4 = /[A-Z]+/;
+      if (
+        reg1.test(this.value) &&
+        reg2.test(this.value) &&
+        reg3.test(this.value) &&
+        reg4.test(this.value)
+      ) {
+        isPW = true;
+      } else {
+        isPW = false;
+      }
+    };
 
     //   注册按钮
     ipt[2].onclick = function () {
       // // 判断两个输入框都输入正确之后发起请求
-      // if (isUsername & isPW) {
+      // if (isUsername && isPW) {
       // } else {
       //   return;
       // }
