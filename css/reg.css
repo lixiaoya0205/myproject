@@ -1,0 +1,38 @@
+.box {
+    height: 400px;
+    width: 300px;
+    margin: 130px auto;
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 50px 30px;
+  }
+  input {
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #c0c0c0;
+    margin: 20px 0;
+    padding: 3px 5px;
+    box-sizing: border-box;
+  }
+  #reg {
+    text-align: center;
+    margin-top: 70px;
+    color: #fff;
+    background-color: #027aae;
+  }
+  #reg:hover {
+    background-color: #035c84;
+  }
+  button {
+    background-color: #027aae;
+    width: 70px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 50px;
+    color: #fff;
+  }
+  span {
+    color: red;
+  }

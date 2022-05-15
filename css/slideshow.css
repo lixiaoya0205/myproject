@@ -1,0 +1,73 @@
+      /* 轮播图 */
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+      .swiper {
+        width: 100%;
+        height: 600px;
+      }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        width: 100%;
+        position: relative;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      #prudacts1 {
+        position: absolute;
+        left: 1100px;
+      }
+      .prudacts1 {
+        height: 200px;
+        width: 450px;
+        background-color: #fff;
+        position: absolute;
+        left: 300px;
+        border-radius: 10px;
+        text-align: left;
+        padding: 30px;
+      }
+      .prudacts1 > p {
+        padding: 3px;
+        display: inline-block;
+        margin: 30px;
+        border-radius: 5px;
+        border: 2px solid #028bd6;
+      }
+      .prudacts1 > .prudacts1p1 {
+        background-color: #028bd6;
+        color: #fff;
+      }
+      .prudacts1 > .prudacts1p2 {
+        background-color: #fff;
+        color: #028bd6;
+      }
+      .prudacts1 > .prudacts1p2:hover {
+        background-color: #028bd6;
+        color: #fff;
+      }

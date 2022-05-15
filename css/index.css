@@ -1,0 +1,187 @@
+      /* 轮播图 */
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+      .swiper {
+        width: 100%;
+        height: 600px;
+      }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        width: 100%;
+        position: relative;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      #prudacts1 {
+        position: absolute;
+        left: 1100px;
+      }
+      .prudacts1 {
+        height: 200px;
+        width: 450px;
+        background-color: #fff;
+        position: absolute;
+        left: 300px;
+        border-radius: 10px;
+        text-align: left;
+        padding: 30px;
+      }
+      .prudacts1 > p {
+        padding: 3px;
+        display: inline-block;
+        margin: 30px;
+        border-radius: 5px;
+        border: 2px solid #028bd6;
+      }
+      .prudacts1 > .prudacts1p1 {
+        background-color: #028bd6;
+        color: #fff;
+      }
+      .prudacts1 > .prudacts1p2 {
+        background-color: #fff;
+        color: #028bd6;
+      }
+      .prudacts1 > .prudacts1p2:hover {
+        background-color: #028bd6;
+        color: #fff;
+      }
+      
+      /* 第三板块  文字模块 */
+      .text-description {
+        width: 100%;
+        height: 160px;
+        text-align: center;
+        padding-top: 40px;
+      }
+      /* 第四板块 */
+      .product-display {
+        height: 65px;
+
+        position: relative;
+      }
+      .product-display > ul {
+        width: 220px;
+        position: absolute;
+        left: 45%;
+        border-bottom: 1px solid #c0c0c0;
+      }
+      .product-display > ul > li {
+        float: left;
+        width: 110px;
+        font-size: 20px;
+        padding-bottom: 30px;
+      }
+      #left {
+        text-align: left;
+      }
+      #right {
+        text-align: right;
+      }
+      /* 商品列表 */
+      /* 打印机 */
+      .product-list-computer,
+      .product-list-printer {
+        width: 1494px;
+        margin: 0 auto;
+        height: 1180px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .product-list-printer > div {
+        width: 478px;
+        margin: 0 10px;
+      }
+      .product-list-printer > div > img {
+        height: 410px;
+      }
+      .product-list-printer > div > h5 {
+        height: 80px;
+        line-height: 80px;
+      }
+      .product-list-printer > div > p {
+        width: 100px;
+        height: 36px;
+        background-color: #028bd6;
+        color: #fff;
+        text-align: center;
+        line-height: 36px;
+        display: inline-block;
+      }
+      .product-list-printer > div > p:hover {
+        background-color: #076ce7;
+      }
+      .product-list-printer > div > a > span {
+        width: 100px;
+        height: 36px;
+        color: #028bd6;
+        text-align: center;
+        line-height: 36px;
+        display: inline-block;
+      }
+      .product-list-printer > div > a >span:hover{
+        color: red;
+      }
+      /* 电脑 */
+       .product-list-computer{
+        display: none;
+      }
+      .product-list-computer > div {
+        width: 478px;
+        margin: 0 10px;
+      }
+      .product-list-computer > div > img {
+        height: 410px;
+      }
+      .product-list-computer > div > h5 {
+        height: 80px;
+        line-height: 80px;
+      }
+      .product-list-computer > div > p {
+        width: 100px;
+        height: 36px;
+        background-color: #028bd6;
+        color: #fff;
+        text-align: center;
+        line-height: 36px;
+        display: inline-block;
+      }
+      .product-list-computer > div > p:hover {
+        background-color: #076ce7;
+      }
+      .product-list-computer > div > a > span {
+        width: 100px;
+        height: 36px;
+        color: #028bd6;
+        text-align: center;
+        line-height: 36px;
+        display: inline-block;
+      }
+      .product-list-computer > div > a > span:hover{
+        color: red;
+      }

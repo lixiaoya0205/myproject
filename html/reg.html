@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/unify.css" />
+    <link rel="stylesheet" href="../css/reg.css" />
+    <script src="../js/axios.min copy.js"></script>
+  </head>
+  <body>
+    <div class="box">
+      <h3>注册账号：</h3>
+      <input type="text" placeholder="请输入注册账号" />
+      <span></span>
+      <input type="text" placeholder="请设置输入密码" />
+      <span></span>
+      <input type="button" id="reg" value="点击注册" />
+      <a href="../html/login.html"><button>返回首页</button></a>
+    </div>
+  </body>
+  <script>
+    let ipt = document.querySelectorAll("input");
+    //   效验 正则
+    //   let isUsername = false;
+    //   ipt[0].onblur = function () {
+    //     let reg = /^[a-zA-Z]\x{5,17}$/;
+    //     if (reg.test(this.value)) {
+    //       this.nextElementSibling.innerHTML = "";
+    //       let username = this.value;
+    //       let url = "http://jx.xuzhixiang.top/ap/api/checkname.php";
+    //       axios.get(url, { params: { username } }).then((r) => {
+    //         if (r.data.code == 0) {
+    //           isUsername = false;
+    //         } else {
+    //           isUsername = true;
+    //         }
+    //         console.log(r.data);
+    //         this.nextElementSibling.innerHTML = r.data.msg;
+    //       });
+    //     } else {
+    //       // 正则不通过
+    //       isUsername = false;
+    //       this.nextElementSibling.innerHTML =
+    //         "用户名，必须是6-18位，只能是数字、字母。下划线组成-只能以字母开头";
+    //     }
+    //   };
+
+    //   //   密码输入 只需要 正则
+    //   let isPW = false;
+    //   ipt[1].onblur = function () {
+    //     let reg1 = /^.{8,16}$/;
+    //     let reg2 = /\d+/;
+    //     let reg3 = /[a-z]+/;
+    //     let reg4 = /[A-Z]+/;
+    //     if (
+    //       reg1.test(this.value) &&
+    //       reg2.test(this.value) &&
+    //       reg3.test(this.value) &&
+    //       reg4.test(this.value)
+    //     ) {
+    //       isPW = true;
+    //     } else {
+    //       isPW = false;
+    //     }
+    //   };
+
+    //   注册按钮
+    ipt[2].onclick = function () {
+      // // 判断两个输入框都输入正确之后发起请求
+      // if (isUsername & isPW) {
+      // } else {
+      //   return;
+      // }
+
+      let username = ipt[0].value;
+      let password = ipt[1].value;
+
+      let regAPI = "http://jx.xuzhixiang.top/ap/api/reg.php";
+      let promise = axios.get(regAPI, {
+        params: {
+          username,
+          password: password,
+        },
+      });
+      promise.then(function (r) {
+        console.log(r.data);
+        let { code, msg } = r.data;
+        console.log(code, msg);
+        alert(msg);
+        if (code == 1) {
+          location.href = "login.html";
+        }
+      });
+    };
+  </script>
+</html>

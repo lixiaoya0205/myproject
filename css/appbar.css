@@ -1,0 +1,92 @@
+/* 导航栏 项目头部*/
+  .box1 {
+    width: 1476px;
+    height: 76px;
+    margin: 0 auto;
+    padding: 15px 136px 0 120px;
+    box-sizing: border-box;
+  }
+  .box1 > div {
+    float: left;
+  }
+  .boxdiv1 > img {
+    height: 50px;
+    width: 50px;
+  }
+  .boxdiv2 {
+    width: 530px;
+    padding: 15px 0px 0 30px;
+    font-size: 18px;
+  }
+  .boxdiv2 > ul > li {
+    float: left;
+    margin: 0 40px;
+    color: #8d8a8a;
+  }
+  .boxdiv2 > ul > li:hover{
+      color: black;
+  }
+  .input1 {
+    width: 440px;
+    height: 35px;
+    margin-top: 9px;
+    font-size: 16px;
+  }
+  #box1div4 {
+    height: 40px;
+    width: 40px;
+    margin: 9px 12px;
+  }
+  .box1div5 {
+    width: 100px;
+    height: 40px;
+    background-color: #028bd6;
+    margin: 7px 0px;
+    color: #fff;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 5px;
+  }
+  .box1div5:hover {
+    background-color: #04a4fb;
+  }
+  #renders {
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-around;
+    height: 410px;
+  }
+  .renders1 {
+    width: 600px;
+  }
+  .renders2 {
+    width: 600px;
+  }
+  .renders3 {
+    width: 600px;
+  }
+  #renders > .guide1 > h3 > a {
+    margin-bottom: 20px;
+    color: black;
+  }
+  .boxdiv2 {
+    position: relative;
+  }
+  .boxdiv2 > ul > li:hover #renders {
+    display: block;
+    display: flex;
+  }
+  #renders {
+    position: absolute;
+    top: 60px;
+    z-index: 2;
+    background-color: #fff;
+    display: none;
+  }
+  .guide1 > a {
+    color: black;
+    padding: 5px;
+    display: inline-block;
+    color: #c0c0c0;
+  }

@@ -1,0 +1,53 @@
+.tfoot {
+    width: 100%;
+    height: 554px;
+    background-color: black;
+    color: #fff;
+  }
+  .region {
+    width: 1476px;
+    height: 50px;
+    margin: 0 auto;
+    padding-top: 30px;
+    border-bottom: 2px solid #fff;
+  }
+  .content {
+    width: 1476px;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    border-bottom: 2px solid #fff;
+    padding-top: 40px;
+  }
+  .plate {
+    width: 296px;
+  }
+  .plate > p {
+    margin-bottom: 20px;
+  }
+  .plate > a {
+    margin: 5px 0;
+    display: inline-block;
+  }
+  #plate5 > a > p {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    background-color: #fff;
+  }
+  .note {
+    width: 1476px;
+    height: 100px;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+  .note > a {
+    border-right: 1px solid #fff;
+    padding: 0 10px;
+  }
+  .note > p {
+    padding-top: 40px;
+  }
+  a:hover{
+    text-decoration: underline;
+  }

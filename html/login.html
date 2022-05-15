@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/unify.css" />
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/axios.min copy.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <a href=""></a>
+    <div class="logo"><img src="../images/a.jpg" alt="" /></div>
+    <div class="text">使用您的HP账户登录</div>
+    <div class="box">
+      <h3>您将登录到:</h3>
+      <h2>HP</h2>
+      <h4>使用我的以下信息登录：</h4>
+      <input id="input1" type="text" placeholder="用户名或电子邮件地址" />
+      <input id="input1" class="input2" type="text" placeholder="请输入您的密码" />
+      <button id="reg">登录</button>
+      <input type="button" id="remember-me" value="" />记住我
+      <span>注册</span>
+      <a href=""><p>忘记您的用户名或密码？</p></a>
+      <div class="other-methods">或使用以下方式登录:</div>
+      <button><img src="../images/face.jpg" alt="" />继续使用Facebook</button
+      >
+      <button><img src="../images/good1.jpg" alt="" />继续使用Google</button></button>
+      <button><img src="../images/asd.jpg" alt="" />继续使用Microsoft</button>
+    </div>
+   
+  </body>
+   <script>
+      let ipt=document.querySelectorAll("#input1");
+      let me = document.querySelector("#remember-me");
+      let region=document.querySelector("#reg")
+      
+      // 注册添加点击事件
+        let reg=document.querySelector("span")
+      reg.onclick=function(){
+        location.href="reg.html";
+      }
+    //  登陆事件
+    region.onclick=function(){
+      let username=ipt[0].value;
+      let password=ipt[1].value;
+      
+      let loginAPI="http://jx.xuzhixiang.top/ap/api/login.php";
+      let promise=axios.get(loginAPI,{
+        params:{
+          username,
+          password:password,
+        },
+      });
+      promise.then(function(r){
+        console.log(r.data);
+        let{code,msg,data}=r.data;
+        console.log(code,msg);
+        alert(msg);
+        if(code==1){
+          console.log(data.id);
+          localStorage.setItem("id",data.id);
+          localStorage.setItem("token",data.token);
+          location.href="../index.html";
+        }
+      });
+    };
+    </script>
+</html>
